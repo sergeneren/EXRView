@@ -68,11 +68,11 @@ select#layer {
 }
 
 select#channel {
-  max-width: 140px;
+  max-width: 120px;
 }
 
 #toolbar {
-  gap: 4px 14px;
+  gap: 4px 10px;
 }
 
 #toolbar .group {
@@ -133,7 +133,7 @@ button.icon:focus-visible, .slider:focus-visible {
    outside it). */
 .slider {
   position: relative;
-  width: 124px;
+  width: 116px;
   height: 20px;
   box-sizing: border-box;
   background: var(--vscode-input-background);
@@ -196,7 +196,7 @@ button.icon:focus-visible, .slider:focus-visible {
 }
 
 #swatch {
-  width: 48px;
+  width: 36px;
   height: 14px;
   border-radius: 2px;
   border: 1px solid var(--vscode-input-border, transparent);

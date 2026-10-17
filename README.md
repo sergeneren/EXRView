@@ -11,6 +11,14 @@ A VS Code viewer for OpenEXR files, built on the reference OpenEXR library
 It runs in desktop VS Code, remote sessions and vscode.dev: the decoder runs
 in the webview, not on the host.
 
+![Deep image, flattened, with the header of the selected layer](images/screenshot-deep.png)
+
+![Depth channel through a Turbo colormap after Normalize](images/screenshot-colormap.png)
+
+![Pixel grid and per-pixel values when zoomed in](images/screenshot-values.png)
+
+Sample images from the [OpenEXR test images](https://github.com/AcademySoftwareFoundation/openexr-images).
+
 ## Using the viewer
 
 Open any `.exr` file. Toolbar, left to right:
@@ -38,3 +46,9 @@ reloads when the file is rewritten on disk.
 npm install
 npm run build:wasm   # needs emsdk (EMSDK env var, or ../emsdk)
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE). The decoder bundles OpenEXR, Imath, OpenJPH,
+libdeflate and Zstandard; their licenses are in
+[ThirdPartyNotices.txt](ThirdPartyNotices.txt).

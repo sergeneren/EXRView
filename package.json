@@ -13,6 +13,12 @@
     "url": "https://github.com/sergeneren/EXRView/issues"
   },
   "homepage": "https://github.com/sergeneren/EXRView#readme",
+  "icon": "images/icon.png",
+  "preview": true,
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -30,6 +36,12 @@
   "main": "./out/extension.js",
   "browser": "./out/extension.js",
   "activationEvents": [],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
   "contributes": {
     "customEditors": [
       {
@@ -45,6 +57,7 @@
     ]
   },
   "scripts": {
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./ && node scripts/copy-wasm.mjs",
     "watch": "tsc -watch -p ./",
     "build:wasm": "node scripts/build-wasm.mjs",

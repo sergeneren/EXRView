@@ -6,3 +6,7 @@ scripts/**
 testdata/**
 **/*.map
 tsconfig.json
+.gitignore
+images/**
+!images/icon.png
+*.vsix
