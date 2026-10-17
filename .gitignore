@@ -1,0 +1,7 @@
+native/build/
+testdata/
+node_modules/
+out/
+dist/
+*.vsix
+media/wasm/

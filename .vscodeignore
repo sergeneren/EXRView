@@ -1,0 +1,8 @@
+.vscode/**
+.clangd
+src/**
+native/**
+scripts/**
+testdata/**
+**/*.map
+tsconfig.json

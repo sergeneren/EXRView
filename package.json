@@ -1,0 +1,59 @@
+{
+  "name": "exrview",
+  "displayName": "EXRView",
+  "description": "OpenEXR viewer: multi-part, multi-layer, deep, Cryptomatte, every compression codec.",
+  "version": "0.2.1",
+  "publisher": "SergenEren",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergeneren/EXRView.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergeneren/EXRView/issues"
+  },
+  "homepage": "https://github.com/sergeneren/EXRView#readme",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "exr",
+    "openexr",
+    "hdr",
+    "cryptomatte",
+    "deep"
+  ],
+  "main": "./out/extension.js",
+  "browser": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "exrview.viewer",
+        "displayName": "EXRView",
+        "selector": [
+          {
+            "filenamePattern": "*.exr"
+          }
+        ],
+        "priority": "default"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./ && node scripts/copy-wasm.mjs",
+    "watch": "tsc -watch -p ./",
+    "build:wasm": "node scripts/build-wasm.mjs",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "~1.90.0",
+    "@vscode/vsce": "^4.0.0",
+    "typescript": "~5.9.2"
+  }
+}
