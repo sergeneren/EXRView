@@ -2,7 +2,7 @@
   "name": "exrview",
   "displayName": "EXRView",
   "description": "OpenEXR viewer: multi-part, multi-layer, deep, Cryptomatte, every compression codec.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publisher": "SergenEren",
   "license": "MIT",
   "repository": {

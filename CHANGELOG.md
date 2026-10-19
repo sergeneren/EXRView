@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2
+
+- Normal arrow pointer over the image instead of a crosshair.
+- Fixed switching layers carrying over the channel position: going from a
+  single-channel layer such as Z to an RGBA layer showed A instead of RGB.
+  The selected channel now follows by name, falling back to RGB.
+
 ## 0.2.1 — first Marketplace release
 
 - Viewer for OpenEXR files built on OpenEXR 3.5 (compiled to WebAssembly):

@@ -377,10 +377,18 @@ function populateChannels() {
   ui.channel.value = state.channel;
 }
 
+function channelInLayer(from, to, channel) {
+  if (!from || from.kind === "cryptomatte" || to.kind === "cryptomatte" || !/^\d+$/.test(channel)) return channel;
+  const base = from.channels[Number(channel)]?.base;
+  const i = to.channels.findIndex((c) => c.base === base);
+  return i >= 0 ? String(i) : null;
+}
+
 async function selectLayer(id, channel) {
+  const previous = state.layer;
   state.layer = state.layers.find((l) => l.id === id) ?? state.layers[0];
   ui.layer.value = state.layer.id;
-  state.channel = channel ?? state.channel;
+  state.channel = channel ?? channelInLayer(previous, state.layer, state.channel);
   populateChannels();
   renderInfo();
   await showImage();
